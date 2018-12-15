@@ -1,7 +1,7 @@
 #!/bin/bash
-if [[ "$1" = build ]]
+if [[ "$1" = train ]]
 then
-    python -m flask run --host=0.0.0.0
-else
     echo "$1"
+else
+    python -m flask run --host=0.0.0.0
 fi
