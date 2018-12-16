@@ -1,2 +1,6 @@
 __pycache__/
 .idea/
+.ipynb_checkpoints/
+*.csv
+*.h5
+quilt_summarize.json
