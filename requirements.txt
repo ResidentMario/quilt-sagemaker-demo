@@ -1,5 +1,6 @@
-scikit-learn
 numpy
 pandas
 t4
 flask
+tensorflow
+keras

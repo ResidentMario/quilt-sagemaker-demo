@@ -1,6 +1,11 @@
 from flask import Flask, Response
 app = Flask(__name__)
 
+
+from keras.models import load_model
+# clf = load_model('model.h5')
+
+
 @app.route('/ping', methods=['GET'])
 def ping():
     """
@@ -8,6 +13,7 @@ def ping():
     """
     status = 200
     return Response(response='\n', status=status, mimetype='application/json')
+
 
 @app.route('/invocations', methods=['POST'])
 def predict():
