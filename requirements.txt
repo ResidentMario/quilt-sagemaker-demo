@@ -4,3 +4,4 @@ t4
 flask
 tensorflow
 keras
+jupyter
