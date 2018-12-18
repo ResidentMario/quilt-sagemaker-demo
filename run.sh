@@ -4,7 +4,7 @@ if [ ! "$AWS_SECRET_ACCESS_KEY" = "" ]; then aws configure set aws_secret_access
 
 if [[ "$1" = train ]]
 then
-    jupyter nbconvert --to notebook --execute build.ipynb
+    jupyter nbconvert --execute --ExecutePreprocessor.timeout=-1 --to notebook build.ipynb
 else
     python -m flask run --host=0.0.0.0
 fi

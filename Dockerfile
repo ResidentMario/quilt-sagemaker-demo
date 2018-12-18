@@ -12,6 +12,10 @@ RUN ["pip", "install", "-r", "requirements.txt"]
 COPY "app.py" .
 COPY "run.sh" .
 COPY "build.ipynb" .
+COPY "catalog-screencap.png" .
+
+# XXX: temp patch until install works again
+COPY "fashion-mnist_train.csv" .
 
 # install model dependencies
 # following Docker data model and AWS security best practices means pulling the necessary data at runtime
