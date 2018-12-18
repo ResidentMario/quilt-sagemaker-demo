@@ -1,6 +1,6 @@
 numpy
 pandas
-t4
+git+https://github.com/quiltdata/t4.git#subdirectory=api/python
 flask
 tensorflow
 keras
