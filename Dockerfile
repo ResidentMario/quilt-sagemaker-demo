@@ -13,11 +13,6 @@ COPY "app.py" .
 COPY "run.sh" .
 COPY "build.ipynb" .
 COPY "catalog-screencap.png" .
-
-# XXX: temp patch until install works again
-# this only works locally b/c fashion-mnist_train.csv is too large to distribute via git
-# until the large file push bug is fixed we're stuck here, once it's patched remove and continue
-COPY "fashion-mnist_train.csv" .
 COPY "health-check-data.csv" .
 
 # install model dependencies
