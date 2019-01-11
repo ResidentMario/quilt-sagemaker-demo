@@ -8,3 +8,4 @@ jupyter
 seaborn
 scikit-learn
 awscli
+sagemaker  # temp
