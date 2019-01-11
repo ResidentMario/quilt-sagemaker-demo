@@ -4,7 +4,6 @@ if [ ! "$AWS_SECRET_ACCESS_KEY" = "" ]; then aws configure set aws_secret_access
 
 if [[ "$1" = train ]]
 then
-    cat ~/.aws/config
     python -c "from sagemaker import get_execution_role; get_execution_role()"
     jupyter nbconvert --execute --ExecutePreprocessor.timeout=-1 --to notebook build.ipynb
 else
