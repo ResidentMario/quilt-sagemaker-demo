@@ -1,7 +1,7 @@
 #!/bin/bash
 if [[ "$1" = train ]]
 then
-    jupyter nbconvert --execute --ExecutePreprocessor.timeout=-1 --to notebook build.ipynb
+    jupyter nbconvert --execute --ExecutePreprocessor.timeout=-1 --to notebook --inplace build.ipynb
 else
     python -c "import t4; t4.Package.install('aleksey/fashion-mnist-clf', registry='s3://alpha-quilt-storage', dest='.')"
     cp aleksey/fashion-mnist-clf/clf.h5 clf.h5
