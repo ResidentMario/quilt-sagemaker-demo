@@ -17,6 +17,6 @@ COPY "health-check-data.csv" .
 # provision environment
 ENV FLASK_APP app.py
 RUN ["chmod", "+x", "./run.sh"]
-EXPOSE 5000
+EXPOSE 8080
 ENTRYPOINT ["./run.sh"]
 CMD ["build"]

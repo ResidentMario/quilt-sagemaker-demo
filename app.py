@@ -23,12 +23,13 @@ def ping():
     """
     Determine if the container is healthy by running a sample through the algorithm.
     """
+    # we will return status ok if the model doesn't barf
+    # but you can also insert slightly more sophisticated tests here
     health_check_arr = pd.read_csv("health-check-data.csv").values
-    result = run_model(health_check_arr)
-
-    if (result == np.array([9,4,0,3,4,4,5,4,8,0,8,9,2,2,2,9,3,0])).all():
+    try:
+        result = run_model(health_check_arr)
         return Response(response='{"status": "ok"}', status=200, mimetype='application/json')
-    else:
+    except:
         return Response(response='{"status": "error"}', status=500, mimetype='application/json')
 
 
