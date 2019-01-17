@@ -12,7 +12,6 @@ RUN ["pip", "install", "-r", "requirements.txt"]
 COPY "app.py" .
 COPY "run.sh" .
 COPY "build.ipynb" .
-COPY "catalog-screencap.png" .
 COPY "health-check-data.csv" .
 
 # provision environment
