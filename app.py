@@ -1,7 +1,6 @@
 import flask
 from flask import Flask, Response
 import pandas as pd
-import numpy as np
 from io import StringIO
 app = Flask(__name__)
 
